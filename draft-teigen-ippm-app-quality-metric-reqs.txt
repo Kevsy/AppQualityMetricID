@@ -5,7 +5,7 @@
 IP Performance Measurement                                  B. I. Teigen
 Internet-Draft                                                  M. Olden
 Intended status: Informational                                     Domos
-Expires: 28 July 2023                                    24 January 2023
+Expires: 21 August 2023                                 17 February 2023
 
 
  Requirements for a Network Quality Framework Useful for Applications,
@@ -60,7 +60,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 28 July 2023.
+   This Internet-Draft will expire on 21 August 2023.
 
 Copyright Notice
 
@@ -135,9 +135,9 @@ Table of Contents
    is successful at being relatively relatable/understandable to end-
    users.
 
-   As pointed out in [RPM], "Our networks remain unresponsive, not from
+   As pointed out in [RPM], “Our networks remain unresponsive, not from
    a lack of technical solutions, but rather a lack of awareness of the
-   problem."  The lack of awareness means a lack of incentives for
+   problem.” The lack of awareness means a lack of incentives for
    operators to invest in improving network quality (beyond increasing
    the throughput).  While Open Source solutions exist, vendors rarely
    implement them.  And it all boils down to the lack of a universally
@@ -361,7 +361,7 @@ Table of Contents
 
    The trimmed mean of latency is the average computed after the worst x
    percent of samples have been removed.  Trimmed means are typically
-   used in cases where there is a know rate of measurement errors that
+   used in cases where there is a known rate of measurement errors that
    should be filtered out before computing results.
 
    In the case where the trimmed mean simply removes measurement errors,
@@ -544,7 +544,7 @@ Acknowledgments
 
    The authors would like to acknowledge Gavin Young, Kevin Smith, Peter
    Thompson, Brendan Black, Gino Dion, Mayur Sarode, Greg Mirsky, Olav
-   Nedrelid, Karl Magnus Kalvik, Knut Joar Stroemmen, Hans Petter
+   Nedrelid, Karl Magnus Kalvik, Knut Joar Strømmen, Hans Petter
    Dalsklev, Jakub Kozlowski, Wim De Ketelaere and Ian Wheelock for
    their comments, reviews, and contributions.
 
