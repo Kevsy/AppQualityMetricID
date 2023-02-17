@@ -90,11 +90,12 @@ Table of Contents
      4.2.  Average Latency
      4.3.  99th Percentile of Latency
      4.4.  Variance of latency
-     4.5.  Jitter
-     4.6.  Trimmed Mean of Latency
-     4.7.  Round-trips Per Minute
-     4.8.  Quality Attenuation
-     4.9.  Summary of performance metrics
+     4.5.  Inter-Packet Delay Variation (IPDV)
+     4.6.  Packet Delay Variation (PDV)
+     4.7.  Trimmed Mean of Latency
+     4.8.  Round-trips Per Minute
+     4.9.  Quality Attenuation
+     4.10. Summary of performance metrics
    5.  Conclusion
    6.  Conventions and Definitions
    7.  Security Considerations
@@ -337,27 +338,37 @@ Table of Contents
 
 4.4.  Variance of latency
 
-   Network latency is not necessarily normally distributed, and so it
-   can be difficult to extrapolate from a measure of the variance of
-   latency to how well specific applications will work.
+   The variance of latency can be calculated from any collection of
+   samples, but network latency is not necessarily normally distributed,
+   and so it can be difficult to extrapolate from a measure of the
+   variance of latency to how well specific applications will work.
 
    The variance of latency can be composed.  If the variance of links
    a-b and b-c is known, then the variance of the composition a-b-c is
    the sum of the variances a-b and b-c.
 
-4.5.  Jitter
+4.5.  Inter-Packet Delay Variation (IPDV)
 
-   Jitter measures the difference in delay between subsequent packets.
-   Some applications are very sensitive to this because of time-outs
-   that cause later-than-usual packets to be discarded.  For some
-   applications, jitter can be useful in assessing application
-   performance, especially when it is combined with other latency
-   metrics.  Jitter does not contain enough information to compute the
-   probability that a wide range of applications will work well.
+   The most common definition of IPDV [RFC5481] measures the difference
+   in one-delay between subsequent packets.  Some applications are very
+   sensitive to this because of time-outs that cause later-than-usual
+   packets to be discarded.  For some applications, IPDV can be useful
+   in assessing application performance, especially when it is combined
+   with other latency metrics.  IPDV does not contain enough information
+   to compute the probability that a wide range of applications will
+   work well.
 
-   Jitter cannot be composed.
+   IPDV cannot be composed.
 
-4.6.  Trimmed Mean of Latency
+4.6.  Packet Delay Variation (PDV)
+
+   The most common definition of PDV [RFC5481] measures the difference
+   in one-delay between the smallest recorded latency and each value in
+   a sample.
+
+   PDV cannot be composed.
+
+4.7.  Trimmed Mean of Latency
 
    The trimmed mean of latency is the average computed after the worst x
    percent of samples have been removed.  Trimmed means are typically
@@ -369,7 +380,7 @@ Table of Contents
    In cases where the trimmed mean removes real measurements, the
    trimming operation introduces errors that may compound when composed.
 
-4.7.  Round-trips Per Minute
+4.8.  Round-trips Per Minute
 
    Round-trips per minute [RPM] is a metric and test procedure
    specifically designed to measure delays as experienced by
@@ -383,7 +394,7 @@ Table of Contents
 
    RPM is not composable.
 
-4.8.  Quality Attenuation
+4.9.  Quality Attenuation
 
    Quality Attenuation is a network performance metric that combines
    latency and packet loss into a single variable [TR-452.1].
@@ -400,7 +411,7 @@ Table of Contents
    specific outcomes given the quality attenuation of each sub-goal
    [Haeri22].
 
-4.9.  Summary of performance metrics
+4.10.  Summary of performance metrics
 
    This table summarizes the properties of each of the metrics we have
    surveyed.
@@ -424,7 +435,11 @@ Table of Contents
    | Variance of | No                     | No           | Yes        |
    | latency     |                        |              |            |
    +-------------+------------------------+--------------+------------+
-   | Jitter      | No                     | Yes          | No         |
+   | IPDV        | Yes for some           | No           | No         |
+   |             | applications           |              |            |
+   +-------------+------------------------+--------------+------------+
+   | PDV         | Yes for some           | No           | No         |
+   |             | applications           |              |            |
    +-------------+------------------------+--------------+------------+
    | Average     | Yes for some           | Yes          | No         |
    | Peak        | applications           |              |            |
@@ -512,6 +527,15 @@ Table of Contents
               Centric Systems Development and Its Application to a
               Blockchain Case Study", n.d.,
               <https://www.mdpi.com/2073-431X/11/3/45>.
+
+   [RFC3393]  Demichelis, C. and P. Chimento, "IP Packet Delay Variation
+              Metric for IP Performance Metrics (IPPM)", RFC 3393,
+              DOI 10.17487/RFC3393, November 2002,
+              <https://www.rfc-editor.org/rfc/rfc3393>.
+
+   [RFC5481]  Morton, A. and B. Claise, "Packet Delay Variation
+              Applicability Statement", RFC 5481, DOI 10.17487/RFC5481,
+              March 2009, <https://www.rfc-editor.org/rfc/rfc5481>.
 
    [RFC6049]  Morton, A. and E. Stephan, "Spatial Composition of
               Metrics", RFC 6049, DOI 10.17487/RFC6049, January 2011,
