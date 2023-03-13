@@ -528,11 +528,6 @@ Table of Contents
               Blockchain Case Study", n.d.,
               <https://www.mdpi.com/2073-431X/11/3/45>.
 
-   [RFC3393]  Demichelis, C. and P. Chimento, "IP Packet Delay Variation
-              Metric for IP Performance Metrics (IPPM)", RFC 3393,
-              DOI 10.17487/RFC3393, November 2002,
-              <https://www.rfc-editor.org/rfc/rfc3393>.
-
    [RFC5481]  Morton, A. and B. Claise, "Packet Delay Variation
               Applicability Statement", RFC 5481, DOI 10.17487/RFC5481,
               March 2009, <https://www.rfc-editor.org/rfc/rfc5481>.
