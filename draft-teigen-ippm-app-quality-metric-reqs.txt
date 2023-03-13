@@ -5,7 +5,7 @@
 IP Performance Measurement                                  B. I. Teigen
 Internet-Draft                                                  M. Olden
 Intended status: Informational                                     Domos
-Expires: 21 August 2023                                 17 February 2023
+Expires: 14 September 2023                                 13 March 2023
 
 
  Requirements for a Network Quality Framework Useful for Applications,
@@ -60,7 +60,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 August 2023.
+   This Internet-Draft will expire on 14 September 2023.
 
 Copyright Notice
 
@@ -209,9 +209,9 @@ Table of Contents
 
    2.  Compare meaningfully to different application requirements.
 
-   3.  Compose.  So that operators can quantify the contributions of
-       different sub-outcomes and sub-paths of the network.  (Useful for
-       Operators and Vendors)
+   3.  Compose.  So that operators can isolate and quantify the
+       contributions of different sub-outcomes and sub-paths of the
+       network.  (Useful for Operators and Vendors)
 
 3.1.  Requirements for end-users
 
@@ -569,8 +569,8 @@ Acknowledgments
    The authors would like to acknowledge Gavin Young, Kevin Smith, Peter
    Thompson, Brendan Black, Gino Dion, Mayur Sarode, Greg Mirsky, Olav
    Nedrelid, Karl Magnus Kalvik, Knut Joar Strømmen, Hans Petter
-   Dalsklev, Jakub Kozlowski, Wim De Ketelaere and Ian Wheelock for
-   their comments, reviews, and contributions.
+   Dalsklev, Jakub Kozlowski, Wim De Ketelaere, William Hawkins, and Ian
+   Wheelock for their comments, reviews, and contributions.
 
 Authors' Addresses
 
